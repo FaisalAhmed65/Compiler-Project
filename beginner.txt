@@ -1,0 +1,8 @@
+Remove-Item lex.yy.c,lex.yy.o,parser.tab.c,parser.tab.h,parser.tab.o,ast.o,codegen.o,optimizer.o,ts2c.exe,output.c,result.exe -ErrorAction SilentlyContinue
+$env:BISON_PKGDATADIR="C:\PROGRA~2\GnuWin32\share\bison"; bison -d parser.y
+flex ts_lexer.l
+gcc -Wall -g -c parser.tab.c lex.yy.c ast.c codegen.c optimizer.c
+gcc -o ts2c.exe parser.tab.o lex.yy.o ast.o codegen.o optimizer.o -lm
+.\ts2c.exe test_input.ts output.c
+gcc -o result.exe output.c -lm
+.\result.exe
