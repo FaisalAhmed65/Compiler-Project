@@ -1,14 +1,4 @@
 %{
-/* ============================================================
-   ts_lexer.l  –  Flex lexer for the TS2C compiler
-   TypeScript → C translator
-   ============================================================
-   This file is the Flex specification.  When compiled together
-   with Bison (parser.y) it returns token codes so the parser
-   can build an AST.  The original stand-alone printf() version
-   has been replaced with proper token returns.
-   ============================================================ */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

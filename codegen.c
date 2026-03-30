@@ -1,17 +1,3 @@
-/* ============================================================
-   codegen.c  –  Three-Address Code generation + C emitter
-   TS2C Compiler  |  TypeScript → C translator
-   ============================================================
-   Two-pass design
-   ────────────────
-   Pass 1 (generate_tac):  Walk the AST recursively and emit
-     TAC instructions into a singly-linked list.  Temporary
-     variables are named _t0, _t1, … and labels L0, L1, …
-
-   Pass 2 (emit_c_code):   Walk the TAC list and emit valid C
-     source code, handling scoping via a brace-depth counter.
-   ============================================================ */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

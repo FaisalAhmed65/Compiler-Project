@@ -1,15 +1,3 @@
-/* ============================================================
-   optimizer.c  –  TAC optimization passes
-   TS2C Compiler  |  TypeScript → C translator
-   ============================================================
-   Passes (applied in order):
-     Pass 1 – Constant Folding
-     Pass 2 – Constant Propagation
-     Pass 3 – Copy Propagation
-     Pass 4 – Dead Code Elimination
-   Each pass returns the (possibly modified) list head.
-   ============================================================ */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

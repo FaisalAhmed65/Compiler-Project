@@ -1,11 +1,6 @@
 #ifndef CODEGEN_H
 #define CODEGEN_H
 
-/* ============================================================
-   codegen.h  –  Three-Address Code (TAC) generation
-   TS2C Compiler  |  TypeScript → C translator
-   ============================================================ */
-
 #include "ast.h"
 
 /* ── TAC instruction opcodes ─────────────────────────────────── */

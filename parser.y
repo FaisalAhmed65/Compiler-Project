@@ -1,12 +1,3 @@
-/* ============================================================
-   parser.y  –  Bison grammar for the TS2C compiler
-   TypeScript → C translator
-   ============================================================
-   Builds an Abstract Syntax Tree (AST) from the token stream
-   produced by ts_lexer.l.  After parsing, the AST root is
-   passed to the code-generation pipeline.
-   ============================================================ */
-
 %{
 #include <stdio.h>
 #include <stdlib.h>
@@ -26,7 +17,7 @@ void yyerror(const char *msg);
 ASTNode *ast_root = NULL;
 %}
 
-/* ── Semantic value union ─────────────────────────────────── */
+
 %union {
     double   dval;   /* numeric literal                         */
     int      ival;   /* boolean / integer                       */
@@ -57,7 +48,7 @@ ASTNode *ast_root = NULL;
 %type <node> arg_list arg_list_ne
 %type <tval> type_ann opt_type_ann opt_return_type
 
-/* ── Operator precedence (lowest → highest) ─────────────────── */
+
 %right '='
 %left  TOK_OR
 %left  TOK_AND
@@ -71,7 +62,7 @@ ASTNode *ast_root = NULL;
 
 %%
 
-/* ── Top level ─────────────────────────────────────────────── */
+
 program
     : stmt_list
         {

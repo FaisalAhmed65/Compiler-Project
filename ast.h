@@ -1,11 +1,6 @@
 #ifndef AST_H
 #define AST_H
 
-/* ============================================================
-   ast.h  –  Abstract Syntax Tree node definitions
-   TS2C Compiler  |  TypeScript → C translator
-   ============================================================ */
-
 /* ── Node type enumeration ─────────────────────────────────── */
 typedef enum {
     /* Statements */

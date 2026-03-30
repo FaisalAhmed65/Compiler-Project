@@ -1,8 +1,3 @@
-/* ============================================================
-   ast.c  –  Abstract Syntax Tree implementation
-   TS2C Compiler  |  TypeScript → C translator
-   ============================================================ */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
